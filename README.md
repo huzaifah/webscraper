@@ -37,3 +37,7 @@ $ pip install scrapy-splash
 ```
 $ scrapy crawl thestar
 ```
+## Relevant References
+1. https://blog.scrapinghub.com/2015/03/02/handling-javascript-in-scrapy-with-splash
+2. http://doc.scrapy.org/en/latest/topics/item-pipeline.html
+3. http://mirkosecke.blogspot.com/2017/05/save-scraped-data-in-mysql-db.html
