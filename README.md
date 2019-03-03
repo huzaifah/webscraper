@@ -32,7 +32,7 @@ http://localhost:8050/
 $ pip install scrapy-splash
 ```
 
-7. Run the spider
+7. Browse to *bsklstockmarket* folder and execute command below to run the spider
 
 ```
 $ scrapy crawl thestar
