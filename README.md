@@ -47,8 +47,20 @@ CREATE TABLE `stocks` (
 	`counter` VarChar( 255 ) NOT NULL )
 ENGINE = InnoDB;
 ```
+8. Open **pipelines.py** and update the database settings as needed
+```python
+class BsklstockmarketPipeline(object):
+    def open_spider(self, spider):
+        print('open spider')
+        self.mydb = mysql.connector.connect(
+          host="localhost",
+          user="root",
+          passwd="password",
+          database="stocksmarket"
+        )
+```
 
-8. Browse to *bsklstockmarket* folder and execute command below to run the spider
+9. Browse to *bsklstockmarket* folder and execute command below to run the spider
 
 ```
 $ scrapy crawl thestar
