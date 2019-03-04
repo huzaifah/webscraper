@@ -32,7 +32,23 @@ http://localhost:8050/
 $ pip install scrapy-splash
 ```
 
-7. Browse to *bsklstockmarket* folder and execute command below to run the spider
+7. Setup MySQL instance and create a database named **stocksmarket**. Create **stocks** table by executing this query
+```sql
+CREATE TABLE `stocks` ( 
+	`board` VarChar( 255 ) NULL,
+	`stock_code` VarChar( 255 ) NOT NULL,
+	`stock_name` VarChar( 255 ) NOT NULL,
+	`logged_date` Date NOT NULL,
+	`logged_time` Time NOT NULL,
+	`open_price` Decimal( 10, 5 ) NULL,
+	`high_price` Decimal( 10, 5 ) NULL,
+	`low_price` Decimal( 10, 5 ) NULL,
+	`last_price` Decimal( 10, 5 ) NULL,
+	`counter` VarChar( 255 ) NOT NULL )
+ENGINE = InnoDB;
+```
+
+8. Browse to *bsklstockmarket* folder and execute command below to run the spider
 
 ```
 $ scrapy crawl thestar
